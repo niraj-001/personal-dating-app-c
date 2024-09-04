@@ -1,0 +1,293 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    overflow-x: hidden;
+}
+
+/* Container for all elements */
+.container {
+    /*width: 80%;*/
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Form container styles */
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background: #007bff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Interests section */
+.interests {
+    margin-bottom: 20px;
+}
+
+.interests label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    cursor: pointer;
+}
+
+/* Profile, Matches, and Happy Users container styles */
+.profiles-container, .matches-container, .happy-users-container {
+    margin-bottom: 30px;
+}
+
+/* Card styles */
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card .interests-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card .interests-list li {
+    background: #eee;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Button group inside cards */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button.heart {
+    background: #28a745;
+}
+
+button.heart:hover {
+    background: #218838;
+}
+
+button.broken-heart {
+    background: #dc3545;
+}
+
+button.broken-heart:hover {
+    background: #c82333;
+}
+
+button.delete {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+button.delete:hover {
+    background: #c82333;
+}
+
+/* Happy Users section */
+.happy-users-container .card {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.happy-users-container .card h3 {
+    color: #155724;
+}
+
+.happy-users-container .card p {
+    font-weight: bold;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .container {
+        width: 100%;
+        /*padding: 20px;*/
+    }
+
+    .card {
+        /*width: calc(50% - 20px);*/
+        margin: 10px;
+    }
+
+    
+
+    div#matches-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#happy-users-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /*.container {
+        width: 95%;*
+    }*/
+
+    .card {
+        /*width: calc(100% - 20px);*/
+        margin: 10px;
+    }
+
+    .button-group {
+        /*flex-direction: column;*/
+        align-items: center;
+    }
+
+    .button-group button {
+        margin: 5px 0;
+    }
+
+    div#profiles-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#matches-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#happy-users-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        /*padding: 10px;*/
+    }
+
+    .form-container,
+    .profiles-container,
+    .matches-container,
+    .happy-users-container {
+        padding: 15px 11px;
+    }
+
+    .card {
+        /*width: calc(100% - 20px);*/
+        margin: 10px 0;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    div#matches-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#profiles-list {
+        /* display: inline-block; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#happy-users-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Create Your Profile</h1>
+            <form id="profile-form">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="number" id="age" placeholder="Age" required>
+                <select id="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <div class="interests">
+                    <h3>Select Your Interests</h3>
+                    <label><input type="checkbox" name="interest" value="Traveling"> Traveling</label>
+                    <label><input type="checkbox" name="interest" value="Cooking"> Cooking</label>
+                    <label><input type="checkbox" name="interest" value="Music"> Music</label>
+                    <label><input type="checkbox" name="interest" value="Sports"> Sports</label>
+                    <label><input type="checkbox" name="interest" value="Reading"> Reading</label>
+                    <label><input type="checkbox" name="interest" value="Gaming"> Gaming</label>
+                    <label><input type="checkbox" name="interest" value="Movies"> Movies</label>
+                    <label><input type="checkbox" name="interest" value="Fitness"> Fitness</label>
+                    <label><input type="checkbox" name="interest" value="Art"> Art</label>
+                    <label><input type="checkbox" name="interest" value="Technology"> Technology</label>
+                </div>
+                <button type="submit">Create Profile</button>
+            </form>
+        </div>
+
+        <div class="profiles-container">
+            <h2 style="text-align: center;">Profiles</h2>
+            <div id="profiles-list"></div>
+        </div>
+
+        <div class="matches-container">
+            <h2 style="text-align: center;">Matches</h2>
+            <div id="matches-list"></div>
+        </div>
+
+        <div class="happy-users-container">
+            <h2 style="text-align: center;">Happy Users</h2>
+            <div id="happy-users-list"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
